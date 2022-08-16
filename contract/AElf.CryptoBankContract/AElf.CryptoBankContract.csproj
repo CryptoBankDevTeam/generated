@@ -4,7 +4,9 @@
         <!-- The root namespace -->
         <RootNamespace>AElf.CryptoBankContract</RootNamespace>
         <!-- Mark this project as a contract -->
+        <ServerGarbageCollection>true</ServerGarbageCollection>
         <IsContract>true</IsContract>
+        <NoWarn>$(NoWarn);NU1605</NoWarn>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
@@ -20,8 +22,15 @@
     </ItemGroup>
     <ItemGroup>
       <None Remove="AElf.Sdk.CSharp" />
+      <None Remove="AElf.Contracts.MultiToken" />
+      <None Remove="AElf.CSharp.Core" />
+    </ItemGroup>
+    <ItemGroup>
+      
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="AElf.Sdk.CSharp" Version="1.2.0" />
+      <PackageReference Include="AElf.Contracts.MultiToken" Version="1.2.0" />
+      <PackageReference Include="AElf.CSharp.Core" Version="1.2.0" />
     </ItemGroup>
 </Project>

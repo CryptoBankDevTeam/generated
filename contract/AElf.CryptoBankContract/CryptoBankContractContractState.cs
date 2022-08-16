@@ -1,4 +1,5 @@
 using AElf.Sdk.CSharp.State;
+using AElf.Types;
 
 namespace AElf.CryptoBankContract
 {
@@ -9,5 +10,12 @@ namespace AElf.CryptoBankContract
     {
         // state definitions go here.
         public SingletonState<string> CryptoBankMessage { get; set; }
+        public SingletonState<Address> FeeSetter { get; set; }
+        public SingletonState<Address> Owner { get; set; }
+
+        public Int64State TaxPoint { get; set; }
+        public MappedState<string, bool> BanMap { get; set; }
+        public Int64State Tax { get; set; }
+        public SingletonState<Address> TokenContract { get; internal set; }
     }
 }

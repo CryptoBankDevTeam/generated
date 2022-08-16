@@ -85,13 +85,8 @@
             <CmdSkipAudit Condition="'$(SkipAudit)' != '' AND '$(SkipAudit)'">-s</CmdSkipAudit>
             <CmdTreatAsSystemContract></CmdTreatAsSystemContract>
             <CmdTreatAsSystemContract Condition="'$(IsSystemContract)' != '' AND '$(IsSystemContract)'">-t</CmdTreatAsSystemContract>
-            <InvariantGlobalization>true</InvariantGlobalization>
         </PropertyGroup>
-        <Exec WorkingDirectory="$(PatcherDir)"
-              Command="dotnet $(PatcherProjectName).dll $(CmdPatchOverwrite)$(CmdSkipAudit)$(CmdTreatAsSystemContract)-p $(TargetDir)$(TargetName).dll"
-              ConsoleToMSBuild="true">
-            <Output TaskParameter="ConsoleOutput" ItemName="PatchContractCodeOutput"/>
-        </Exec>
+        
         <Message Text="$(PatchContractCodeOutput)"/>
     </Target>
     <!-- Move dlls before codecov injection in travis -->

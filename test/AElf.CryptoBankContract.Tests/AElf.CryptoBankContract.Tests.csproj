@@ -4,6 +4,8 @@
         <TargetFramework>net6.0</TargetFramework>
         <RootNamespace>AElf.CryptoBankContract</RootNamespace>
         <IsPackable>false</IsPackable>
+        <NoWarn>NU1605</NoWarn>
+
     </PropertyGroup>
 
     <PropertyGroup>

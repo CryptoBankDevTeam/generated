@@ -5,6 +5,7 @@
         <TargetFramework>net6.0</TargetFramework>
         <OutputType>Exe</OutputType>
         <Description>Smart contract deployer.</Description>
+        <NoWarn>$(NoWarn);NU1605</NoWarn>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <DefineConstants>TRACE;UNIT_TEST</DefineConstants>
